@@ -90,10 +90,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-
-####   ARCOLINUX SETTINGS   ####
+# export ARCHFLAGS="-arch x86_64"/
 
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
