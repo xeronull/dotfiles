@@ -1,0 +1,131 @@
+#news
+https://hnrss.org/frontpage news tech "~HackerNews"
+https://www.techmeme.com/feed.xml news
+https://ss64.com/rss.xml
+https://www.linux.com/rss/feeds.php "~Linux.com"
+https://www.cyberciti.biz/feed "~Nixcraft"
+https://www.tecmint.com/feed "~Tecmint"
+https://www.linuxfoundation.org/feed "~Linux Foundation"
+https://www.linuxjournal.com/news/feed
+https://feeds.nytimes.com/nyt/rss/HomePage
+https://rssfeeds.usatoday.com/usatoday-NewsTopStories
+https://www.npr.org/rss/rss.php?id=1001
+
+# 4ch
+https://boards.4chan.org/wg/index.rss
+https://boards.4chan.org/g/index.rss
+
+# Movies
+https://feeds.feedburner.com/movieweb_news
+https://showrss.info/other/all.rss
+
+# Horror  
+https://bloody-disgusting.com/feed/
+https://ihorror.com/feed
+https://horrornews.net/feed
+https://horrorfreaknews.com/feed
+https://dreadcentral.com/feed
+
+# Torrents
+https://feeds.feedburner.com/Torrentfreak
+https://yts.am/rss
+
+# 8ch
+https://8kun.top/cyber/index.rss "~Cyberpunk"
+
+# 4chan
+https://boards.4channel.org/a/index.rss
+
+
+# Porn
+https://www.pornhub.com/rss
+
+# Hentai 
+
+
+# blogs
+
+
+# Reddit
+https://www.reddit.com/.rss "~Reddit-All"
+https://www.reddit.com/r/unixporn.rss "~Reddit-Unixporn"
+https://www.reddit.com/r/commandline.rss "~Reddit-CommandLine"
+https://www.reddit.com/r/linux.rss "~Reddit-Linux"
+https://www.reddit.com/r/linuxmemes.rss "~Reddit-Linuxmemes"
+https://www.reddit.com/r/itsaunixsystem.rss "~Reddit-Itsaunixsystem"
+https://www.reddit.com/r/opendirectories.rss "~Reddit-OpenDirectories"
+https://www.reddit.com/r/Defcon.rss "~Reddit-Defcon"
+https://www.reddit.com/r/learnpython.rss "~Reddit-Learn Python"
+https://www.reddit.com/r/sysadmin.rss "~Reddit-Sysadmin"
+https://www.reddit.com/r/vim.rss "~Reddit-Vim"
+https://www.reddit.com/r/tmux.rss "~Reddit-Tmux"
+https://www.reddit.com/r/suckless.rss "~Reddit-Suckless"
+https://www.reddit.com/r/qutebrowser.rss "~Reddit-Qutebrowser"
+https://www.reddit.com/r/memes.rss "~Reddit-Memes"
+https://www.reddit.com/r/torrents.rss "~Reddit-Torrents"
+https://www.reddit.com/r/trackers.rss "~Reddit-Trackers"
+https://www.reddit.com/r/bash.rss "~Reddit-Bash"
+https://www.reddit.com/r/guitar.rss "~Reddit-Guitar"
+
+# nexusmods/skyrim
+https://www.nexusmods.com/skyrim/rss/newtoday
+https://www.nexusmods.com/skyrim/rss/updatedtoday
+
+# Blogs
+
+#Videos/Youtubers
+# Copy Me;
+#   httpss://invidio.us/feed/channel/channel id here
+# 	httpss://www.youtube.com/feeds/videos.xml?channel_id=
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvIL0fhX8_NOvL3D0hUmiIw "~Alchestbreach"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube linux terminal "~Luke Smith"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkf4VIqu3Acnfzuk3kRIFwA "~gotbletu"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCq2QwnKW79w4a55ZQqOBReg "~Irishluck Linux"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsV9XI4aCq9LoPkt4trTh0g "~DasGregor"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCMZxtiWIdrXUUbWMAe6D-Iw "~msjche"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCT2TIET5hixQiVMP-rqFIcA "~Wilburgur"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw "~Pewdiepie"
+https://invidio.us/feed/channel/UCD4EOyXKjfDUhCI6jlOZZYQ "~Eli The Computer Guy"
+
+
+
+# General GNU/Linux News
+https://feeds.launchpad.net/announcements.atom
+https://dev.to/feed
+https://distrowatch.com/news/dw.xml
+https://distrowatch.com/news/dwd.xml
+https://distrowatch.com/news/dwp.xml
+https://lwn.net/headlines/newrss
+https://news.softpedia.com/newsRSS/Linux-7.xml
+https://linuxscoop.com/feed/rss
+https://feeds.feedburner.com/ItsFoss
+https://www.phoronix.com/rss.php
+https://opensource.com/feed 
+
+# General GNU/Linux Tutorials
+
+https://www.debian-administration.org/articles.rdf
+https://www.howtoforge.com/feed
+https://feeds.howtogeek.com/howtogeek
+https://feeds.feedburner.com/tecmint
+
+# Shell Resources
+https://feeds2.feedburner.com/Command-line-fu "~CommandLineFu-All Commands"
+https://stackoverflow.com/feeds/tag?tagnames=bash&sort=newest
+https://stackoverflow.com/feeds/tag?tagnames=python&sort=newest
+https://stackoverflow.com/feeds/tag?tagnames=python-2.7&sort=newest
+
+# Ubuntu packages
+
+# Podcasts
+https://linuxscoop.com/feed/rss
+https://smlr.us/?feed=smlr-ogg
+https://feeds.twit.tv/floss.xml
+https://feeds2.feedburner.com/TheLinuxActionShowOGG
+https://feeds.feedburner.com/HowtoLinuxOgg
+https://mintcast.org/category/ogg/feed
+https://lhspodcast.info/category/podcast-ogg/feed
+https://gnuworldorder.info/ogg.xml
+https://hackerpublicradio.org/hpr_total_ogg_rss.php
+
