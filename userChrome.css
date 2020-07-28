@@ -1,0 +1,206 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/**
+ * Due way style sheets are loaded, some styles in this sheet may not apply. To
+ * ensure that our styles work as intended, we load additional CSS via XBL and
+ * JavaScript.
+ */
+keyset#mainKeyset {
+  -moz-binding: url("userChrome.xml#user-chrome-js");
+}
+
+#urlbar html|input.textbox-input::-moz-selection {
+  background-color: grey !important;
+}
+
+:root {
+  --mcolor:var(--background);
+  --tcolor:(--foreground);
+}
+
+browser {
+    margin-right: -17px !important;
+    margin-bottom:-17px!important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    }
+
+#bookmarksPanel, #history-panel {
+  background-color: #000000 !important;
+}
+
+
+ /* hide statuspanel bottom left */
+#statuspanel[type="overLink"] #statuspanel-label,
+#statuspanel[type="status"] #statuspanel-label[value^="Look"],
+#statuspanel[type="status"] #statuspanel-label[value^="Connect"],
+#statuspanel[type="status"] #statuspanel-label[value^="Send"],
+#statuspanel[type="status"] #statuspanel-label[value^="Transfer"],
+#statuspanel[type="status"] #statuspanel-label[value^="Read"],
+#statuspanel[type="status"] #statuspanel-label[value^="Wrote"],
+#statuspanel[type="status"] #statuspanel-label[value^="Wait"],
+#statuspanel[type="status"] #statuspanel-label[value*="TLS handshake"],
+#statuspanel[type="status"] #statuspanel-label[value*="FTP transaction"] {
+ display:none!important;
+}
+
+ /* hides the native tabs, great to use with treestyle tab addon */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* remove maximum/minimum width restriction of sidebar */
+#sidebar {
+max-width: none !important;
+min-width: 0px !important; }
+
+ /* hide navigation bar when it is not focused; use Ctrl+L to get focus */
+#main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
+  margin-top: -45px;
+}
+#navigator-toolbox {
+  transition: 0.2s margin-top ease-out;
+}
+
+
+
+/*change background color of popup menus*/ 
+.popup-internal-box {background: rgb(0,0,0) !important;}
+
+.menu-right {
+ -moz-appearance: none !important;
+ list-style-image: url("chrome://global/skin/icons/arrow-dropdown-16.svg") !important;
+ transform: rotate(-90deg) !important;
+ -moz-context-properties: fill !important;
+ fill: white !important;
+ color: white !important;
+}
+
+
+  /* hide suggestions completely */ 
+#PopupAutoCompleteRichResult { display: none; } 
+
+/* HIDE DINOSAUR SHIT ---------------------------------------------------------------------------------------- */
+#PanelUI-button,
+#home-button,#reload-button,#stop-button,#forward-button,#back-button,
+#customizableui-special-spring2,#library-button,
+#sidebar-button,.tabs-newtab-button,.tab-close-button,.tab-icon-image,
+#identity-box,.urlbar-history-dropmarker,#pocket-button,#star-button,
+#wrapper-alltabs-button,#wrapper-new-tab-button,#wrapper-customizableui-special-spring1,
+#wrapper-customizableui-special-spring2,
+#nav-bar-overflow-button,.titlebar-placeholder{
+  visibility: collapse !important;
+}
+.urlbar-icon{
+    visibility: collapse !important;
+}
+/* hides a ugly black bottom background under each unfocused tab and urlbar*/
+#navigator-toolbox{
+	--tabs-border-color: none !important;
+    --toolbox-border-bottom-color: none !important;
+}
+
+#nav-bar { /* Navigation Toolbar */
+  background-color: transparent !important;
+}
+
+* {
+    font-family: t cherry !important;
+}
+/* TABBAR ---------------------------------------------------------------------------------------------------- */
+/* 100% tabs width */
+.tabbrowser-tab[fadein]:not([pinned]) {
+	max-width: 100% !important;
+	font-size: 0.8em !important;
+	font-family: t cherry !important;
+}
+/* hides white borders between tabs */
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+   border:none !important;
+}
+/* center tab text title */
+.tab-label {
+	-moz-box-flex: 1 !important; 
+	text-align: center !important;
+	font-family: t cherry !important;
+    color : var(--tcolor);
+}
+.tab-throbber{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.tab-line{
+    visibility: collapse !important;
+}
+
+.tab-background {
+	border: none !important;
+    background-attachment: none!important;
+    background-color: var(--mcolor) !important;
+    background-image: none!important;
+}
+
+.tabbrowser-tab:not([selected]) .tab-background {
+	border: none !important;
+    background-color: rgb(34, 34, 34) !important;
+}
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------- */
+ #urlbar ::-moz-selection,
+ .searchbar-textbox ::-moz-selection {
+     background-color: transparent !important;
+     color: white !important;
+}
+
+/* URLBAR ---------------------------------------------------------------------------------------------------- */
+#urlbar{
+  font-size: 0.7em !important;
+  text-align: center !important;
+  font-family: t cherry !important;
+  /*color: var(--background) !important;*/ 
+  background-color: #000000 !important;
+  border: none !important;
+  box-shadow: none !important;
+  --toolbarbutton-border-radius: 0px !important;
+  margin: 0!important;
+}
+
+#urlbar:not([focused]) .urlbar-input-box {
+        text-align: center;
+}
+
+#urlbar *|input::placeholder { opacity: 0 !important; }
+
+/***************************
+
+Expands urlbar on Focus
+
+***************************/
+
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar { margin-right: 60vw !important; }
+
+:root:not([customizing]) #navigator-toolbox:focus-within #TabsToolbar { margin-left: 40vw !important; }
+/* ----------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox {
+	min-height: 0 !important;
+}
+
+#tabbrowser-tabs tab[first-visible-tab="true"][last-visible-tab="true"] {
+	visibility: collapse;
+}
+  /* hide the "Tree Style Tab" header at the top of the sidebar (only Tree Style Tab sidebar) */
+  #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+    display: none;
+}
+
+#nav-bar{position: fixed !important;bottom: 0px;width:100vw; opacity: 0}
+#nav-bar-customization-target{width: calc(100vw - 30px)}
+#nav-bar[overflowing] > #nav-bar-customization-target{width: calc(100vw - 60px)}
+#PanelUI-button,#nav-bar-overflow-button{transform: translateY(2px)}
+#PanelUI-button{float:right}
+#nav-bar:-moz-any(:hover,:focus-within) {opacity: 1;}
+#nav-bar{margin-top: -32px;visibility: hidden;transition:0s all 2s;}

@@ -1,0 +1,62 @@
+/* /* Frank edited file - you are good to go...*/
+
+
+@namespace url(http://www.w3.org/1999/xhtml);
+
+::-moz-selection {
+color: white !important;  /*Colour of text*/
+background: grey !important;  /*Highlighting colour*/
+}
+
+input {
+  border: 2px inset black;
+  background-color: black;
+  color: white;
+  -moz-appearance: none !important;
+}
+
+textarea {
+  border: 2px inset black;
+  background-color: black;
+  color: white;
+  -moz-appearance: none !important;
+}
+
+select {
+  border: 2px inset black;
+  background-color: black;
+  color: white;
+  -moz-appearance: none !important;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  border: 2px inset black ! important;
+  background-color: black ! important;
+  color: ThreeDFace ! important;
+  -moz-appearance: none !important;
+}
+
+*|*::-moz-radio {
+  background-color: black;
+  -moz-appearance: none !important;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+  border: 2px outset black;
+  background-color: #eeeeee;
+  color: white;
+  -moz-appearance: none !important;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: block;
+  margin: 8px;
+  -moz-appearance: none !important;
+}
+
