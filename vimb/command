@@ -1,0 +1,19 @@
+open searx.me
+open -thttps://startpage.com/sp/search
+tabopen https://startpage.com/sp/search
+open searx.me
+q
+open invidio.us
+open reddit.com/r/commandline
+open searx.gnustyle.com
+open searx.me
+q
+open https://reddit.com
+open reddit.com
+q
+open reddit.com/r/shibbysays
+open reddit.com
+q
+open reddit.com
+open invidio.us
+open 8kun.top
