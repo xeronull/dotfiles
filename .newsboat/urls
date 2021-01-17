@@ -1,7 +1,6 @@
 #news
 https://hnrss.org/frontpage news tech "~HackerNews"
 https://www.techmeme.com/feed.xml news
-https://ss64.com/rss.xml
 https://www.linux.com/rss/feeds.php "~Linux.com"
 https://www.cyberciti.biz/feed "~Nixcraft"
 https://www.tecmint.com/feed "~Tecmint"
@@ -23,7 +22,6 @@ https://showrss.info/other/all.rss
 https://bloody-disgusting.com/feed/
 https://ihorror.com/feed
 https://horrornews.net/feed
-https://horrorfreaknews.com/feed
 https://dreadcentral.com/feed
 
 # Torrents
@@ -68,14 +66,13 @@ https://www.reddit.com/r/bash.rss "~Reddit-Bash"
 https://www.reddit.com/r/guitar.rss "~Reddit-Guitar"
 
 # nexusmods/skyrim
-https://www.nexusmods.com/skyrim/rss/newtoday
 https://www.nexusmods.com/skyrim/rss/updatedtoday
 
 # Blogs
 
 #Videos/Youtubers
 # Copy Me;
-#   httpss://invidio.us/feed/channel/channel id here
+#   httpss://invidio.xyz/feed/channel/channel id here
 # 	httpss://www.youtube.com/feeds/videos.xml?channel_id=
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvIL0fhX8_NOvL3D0hUmiIw "~Alchestbreach"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube linux terminal "~Luke Smith"
@@ -86,7 +83,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCsV9XI4aCq9LoPkt4trTh0g "~D
 https://www.youtube.com/feeds/videos.xml?channel_id=UCMZxtiWIdrXUUbWMAe6D-Iw "~msjche"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT2TIET5hixQiVMP-rqFIcA "~Wilburgur"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw "~Pewdiepie"
-https://invidio.us/feed/channel/UCD4EOyXKjfDUhCI6jlOZZYQ "~Eli The Computer Guy"
+https://invidio.xyz/feed/channel/UCD4EOyXKjfDUhCI6jlOZZYQ "~Eli The Computer Guy"
 
 
 
@@ -104,8 +101,6 @@ https://www.phoronix.com/rss.php
 https://opensource.com/feed 
 
 # General GNU/Linux Tutorials
-
-https://www.debian-administration.org/articles.rdf
 https://www.howtoforge.com/feed
 https://feeds.howtogeek.com/howtogeek
 https://feeds.feedburner.com/tecmint
@@ -125,7 +120,6 @@ https://feeds.twit.tv/floss.xml
 https://feeds2.feedburner.com/TheLinuxActionShowOGG
 https://feeds.feedburner.com/HowtoLinuxOgg
 https://mintcast.org/category/ogg/feed
-https://lhspodcast.info/category/podcast-ogg/feed
 https://gnuworldorder.info/ogg.xml
 https://hackerpublicradio.org/hpr_total_ogg_rss.php
 
