@@ -209,4 +209,9 @@ ex ()
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-neofetch
+#start tmux on every shell login
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
+#neofetch
