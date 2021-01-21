@@ -16,8 +16,3 @@ if [systemd-detect-virt = "oracle"];
 fi
 
 xmodmap .xmodmap
-
-#prevent the computer from suspending when idle
-xset s off
-xset -dpms
-xset s noblank
