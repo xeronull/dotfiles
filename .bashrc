@@ -14,7 +14,8 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-PS1='[\u@\h \W]\$ '
+PS1='> : '
+#PS1='[\u@\h \W]\$ '
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -23,6 +24,9 @@ fi
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
+
+#set editing-mode vi
+set -o vi
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -47,6 +51,9 @@ alias fgrep='fgrep --color=auto'
 
 #readable output
 alias df='df -h'
+
+#search yt
+alias yt='yt.py'
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
@@ -209,9 +216,29 @@ ex ()
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
-#start tmux on every shell login
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	   exec tmux
+ fi
+
+export BROWSER='/usr/bin/firefox'
+export PATH="$PATH:$HOME/scripts"
 
 #neofetch
+
+
+#search firefox history with fzf
+ffhistory() {
+local cols sep
+cols=$(( COLUMNS / 3 ))
+sep='{::}'
+tmpfile=$(mktemp /tmp/ffhist.XXXXX)
+cp -f ~/.mozilla/firefox/crg8cy23.default-release/places.sqlite $tmpfile
+sqlite3 -separator $sep $tmpfile \
+"select substr(title, 1, $cols), url from moz_places
+where url not like '%google%search%'
+order by
+visit_count desc,
+last_visit_date desc;" |
+awk -F $sep '{printf "%-'$cols's \x1b[36m%s\x1b[m\n", $1, $2}' |
+fzf --ansi --multi | sed 's#.*\(https*://\)#\1#'
+}
