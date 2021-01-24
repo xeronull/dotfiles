@@ -1,6 +1,9 @@
 #auto-reload
 auto-reload yes
 
+#keep cursor above and below set line
+scrolloff 10
+
 #colors
 color listnormal cyan default
 color listfocus black yellow standout bold
