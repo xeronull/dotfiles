@@ -113,6 +113,15 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 #quickly kill conkies
 alias kc='killall conky'
 
+#newsboat
+alias news='newsboat'
+
+#clear screen
+alias c='clear'
+
+#vim
+alias v='sudo vim'
+
 #hardware info --short
 alias hw="hwinfo --short"
 
@@ -243,5 +252,4 @@ awk -F $sep '{printf "%-'$cols's \x1b[36m%s\x1b[m\n", $1, $2}' |
 fzf --ansi --multi | sed 's#.*\(https*://\)#\1#'
 }
 
-#make sure xbanish is installed 
 xbanish &
