@@ -1,0 +1,81 @@
+<!-- Search your favorite sites -->
+
+<title>search</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<!--<style>
+  .hide { display: none; }
+  .search, #term, #go {
+    display: block;
+    font: 20px/50px sans-serif;
+    width: 30%;
+  }
+  #term { padding-left: 10px; }
+</style>-->
+
+<div id="searches"></div>
+
+<form id="searchform" class="hide">
+<input id="term"/>
+<button id="go">Search</button>
+</form>
+
+<!-- This is where you can put sites to search -->
+<script>
+const searches = [
+  {
+    name: 'Idiotbox',
+    baseUrl: 'https://codemadness.org/idiotbox/?m=light&q=',
+    searchRel: '%s'
+  },
+  {
+    name: 'Reddit',
+    baseUrl: 'https://www.reddit.com/search/?q=',
+    searchRel: '%s'
+  },
+  {
+    name: 'Gists',
+    baseUrl: 'https://gist.github.com/search?q=',
+    searchRel: '%s'
+  },
+  { 
+    name: 'Twitch',
+    baseUrl: 'https://www.twitch.tv/search?term=',
+    searchRel: '%s'
+  },
+  {
+    name: 'Spankbang',
+    baseUrl: 'https://spankbang.com/s/',
+    searchRel: '%s'
+  }
+];
+var list = document.getElementById('searches');
+var form = document.getElementById('searchform');
+var input = document.getElementById('term');
+var button = document.getElementById('go');
+
+searches.forEach(function(search) {
+  var item = document.createElement('button');
+  item.className = 'search';
+  item.innerHTML = search.name;
+  item.onclick = ask.bind(null, search);
+  list.appendChild(item);
+})
+
+function ask(search) {
+  button.innerHTML = 'Search ' + search.name;
+  button.onclick = function(event) {
+                     event.preventDefault();
+                     doSearch(search);
+                   };
+  list.className = 'hide';
+  form.className = '';
+  term.focus();
+}
+
+function doSearch(search) {
+  window.location.href = input.value ? search.baseUrl + search.searchRel.replace('%s', input.value) : search.baseUrl;
+}
+</script>
+
