@@ -1,3 +1,5 @@
+# make sure you have readability-cli installed yay -S readability-cli --noconfirm
+
 keymap  L       NEXT
 keymap  H       PREV
 keymap  \\\r    COMMAND "SHELL 'readable $W3M_URL -p html-title,html-content > /tmp/readable.html' ; LOAD /tmp/readable.html"
