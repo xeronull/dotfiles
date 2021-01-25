@@ -1,5 +1,7 @@
 # make sure you have readability-cli installed yay -S readability-cli --noconfirm
+# make sure you have python-readability-lxml installed yay -S python-readability-lxml --noconfirm
 
 keymap  L       NEXT
 keymap  H       PREV
 keymap  \\\r    COMMAND "SHELL 'readable $W3M_URL -p html-title,html-content > /tmp/readable.html' ; LOAD /tmp/readable.html"
+keymap  \\\R    COMMAND "SHELL 'python3 -m readability.readability -u $W3M_URL > /tmp/readability.html' ; LOAD /tmp/readability.html"
