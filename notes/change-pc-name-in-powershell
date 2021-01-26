@@ -1,0 +1,2 @@
+# open powershell as admin
+ Rename-Computer -NewName “New-PC-Name”
