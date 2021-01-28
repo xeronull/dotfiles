@@ -1,4 +1,8 @@
-working steps so far on getting audio to in wsl1/ws2, what worked for me
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup
+https://www.google.com/search?client=firefox-b-1-d&sxsrf=ALeKk02AzpDVkFYp5mgm142if1aO3u7olQ%3A1611807680036&ei=wDsSYMPSAemmggf2oK8Y&q=%22wsl2%22+%22pulseaudio%22++site%3Areddit.com%3Agithub.com&oq=%22wsl2%22+%22pulseaudio%22++site%3Areddit.com%3Agithub.com&gs_lcp=Cgdnd3Mtd2l6EAM6BAgAEEdQ3XRY66YBYLWqAWgAcAJ4AIABigGIAYEJkgEDNC43mAEAoAEBqgEHZ3dzLXdpesgBBMABAQ&sclient=gws-wiz&ved=0ahUKEwjDstvB473uAhVpk-AKHXbQCwMQ4dUDCAw&uact=5
+https://github.com/microsoft/WSL/issues/5816
+
+working steps so far on getting audio to work in wsl1/ws2, what has worked for me
 still work in progress, testing
 
 Windows side
