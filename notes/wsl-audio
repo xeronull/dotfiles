@@ -12,6 +12,7 @@ Create a config.pa file in that folder with these contents:
 load-module module-native-protocol-tcp auth-anonymous=1
 load-module module-esound-protocol-tcp auth-anonymous=1
 load-module module-waveout sink_name=output source_name=input record=0
+load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;172.16.0.0/12
 
 WSL side, put the following in your .bashrc file:
 export PULSE_SERVER=tcp:127.0.0.1
