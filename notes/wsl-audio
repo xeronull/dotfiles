@@ -5,6 +5,9 @@ https://github.com/microsoft/WSL/issues/5816
 working steps so far on getting audio to work in wsl2, what has worked for me
 still work in progress, testing
 
+Install: PulseAudio for Windows
+http://code.x2go.org/releases/binary-win32/3rd-party/pulse/pulseaudio-5.0-rev18.zip
+
 Windows side
 C:\pulse
 Create a config.pa file in that folder with these contents:
@@ -14,5 +17,46 @@ load-module module-esound-protocol-tcp auth-anonymous=1
 load-module module-waveout sink_name=output source_name=input record=0
 load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1;172.16.0.0/12
 
+you can run pulse through windows with C:\pulse\pulseaudio.exe -F C:\pulse\config.pa --exit-idle-time=-1 for testing purposes. This will later be handled by NSSM.
+
+Install: NSSM for launching windows-side pulseaudio
+http://nssm.cc/ci/nssm-2.24-101-g897c7ad.zip
+
+Using pre-release build of NSSM.
+
+Copy the win64 version of nssm.exe to C:\pulse\
+
+Run in admin. powershell: C:\pulse\nssm.exe install PulseAudio
+
+Follow steps, set exe location and start dir. should auto fill.
+
+For arguments: -F C:\pulse\config.pa --exit-idle-time=-1
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/NSSM_Step1.png
+
+Under description, set display name. Hit install, then manually start the service under task manager's services tab
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/NSSM_Step2.png
+
+Install VcxSrv:
+Install to Windows, run initially and save the congfiguration as an xlaunch file. Ensure that:
+Multiple Windows is selected
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_1.png
+
+Start No Client is selected
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_2.png
+
+Clipboard, Native OpenGL, and Disable Access Control are selected.
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_3.png
+
+This last option is essential, without Access Control disabled you won't be able to forward reliably from the WSL2 instance.
+For easier future use, save the .xlaunch file. It can be used as a shortcut to launch with these settings.
+
+https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_4.png
 WSL side, put the following in your .bashrc file:
+export DISPLAY="$(ip route|awk '/^default/{print $2}'):0.0"
+export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}');
 export PULSE_SERVER=tcp:127.0.0.1
