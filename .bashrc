@@ -252,4 +252,8 @@ awk -F $sep '{printf "%-'$cols's \x1b[36m%s\x1b[m\n", $1, $2}' |
 fzf --ansi --multi | sed 's#.*\(https*://\)#\1#'
 }
 
+# search and play youtube audio with preferred player
+# how to use --- yt search_term_here
+yt() { youtube-dl -q -f bestaudio --max-downloads 1 --no-playlist --default-search ${2:-ytsearch} "$1" -o - | mpv -vo null /dev/fd/3 3<&0 </dev/tty; }
+
 xbanish &
