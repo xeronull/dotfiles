@@ -1,0 +1,13 @@
+working steps so far on getting audio to in wsl1/ws2, what worked for me
+still work in progress, testing
+
+Windows side
+C:\pulse
+Create a config.pa file in that folder with these contents:
+
+load-module module-native-protocol-tcp auth-anonymous=1
+load-module module-esound-protocol-tcp auth-anonymous=1
+load-module module-waveout sink_name=output source_name=input record=0
+
+WSL side, put the following in your .bashrc file:
+export PULSE_SERVER=tcp:0.0.0.0
