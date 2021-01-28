@@ -32,30 +32,37 @@ Follow steps, set exe location and start dir. should auto fill.
 
 For arguments: -F C:\pulse\config.pa --exit-idle-time=-1
 
+![image]https://imgur.com/3d9sh1G
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/NSSM_Step1.png
 
 Under description, set display name. Hit install, then manually start the service under task manager's services tab
 
+![image]https://imgur.com/04eoKL6
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/NSSM_Step2.png
 
 Install VcxSrv:
 Install to Windows, run initially and save the congfiguration as an xlaunch file. Ensure that:
 Multiple Windows is selected
 
+![image]https://imgur.com/yZxJLnx
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_1.png
 
 Start No Client is selected
 
+![image]https://imgur.com/UxpY4q1
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_2.png
 
 Clipboard, Native OpenGL, and Disable Access Control are selected.
 
+![image]https://imgur.com/GfH1pUG
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_3.png
 
 This last option is essential, without Access Control disabled you won't be able to forward reliably from the WSL2 instance.
 For easier future use, save the .xlaunch file. It can be used as a shortcut to launch with these settings.
 
+![image]https://imgur.com/Wa0AMCV
 https://git.bortle-host.io/eamondo2/wsl2-pulse-x11-setup/media/branch/master/photos/VCX_Setup_4.png
+
 WSL side, put the following in your .bashrc file:
 export DISPLAY="$(ip route|awk '/^default/{print $2}'):0.0"
 export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}');
