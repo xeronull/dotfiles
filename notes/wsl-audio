@@ -67,3 +67,9 @@ WSL side, put the following in your .bashrc file:
 export DISPLAY="$(ip route|awk '/^default/{print $2}'):0.0"
 export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}');
 export PULSE_SERVER=tcp:127.0.0.1
+
+make a shortcut of vcxsrv.exe and put it in C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+add this to the Target field:
+C:\VcXsrv\vcxsrv.exe :0 -ac -multiwindow -clipboard -wgl
+add this to Start in field:
+C:\VcXsrv
