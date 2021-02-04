@@ -1,3 +1,5 @@
+Credit: https://shellmagic.xyz/
+
 Bash (Bourne Again Shell) is a shell language build on-top of the orignal Bourne Shell which was distributed with V7 Unix in 1979 and became the standard for writing shell scripts. Today it is primary to most Linux distributions, MacOS and it has even recently been enabled to run on Windows through something called WSL (Windows Subsystem for Linux).
 
 This reference sheet should cover most syntax, tips and other tricks there is to Bash scripting. At this moment however (because the site was only recently released) I haven't gotten around to any explanations! But hopefully a lot of examples should be available in a few months as I'd have had the time to write explanations and script examples by then.
@@ -1485,7 +1487,3 @@ case ) ;; esac
 
 Alternative if-branching. Each case is an expression which matches a given pattern (i.e., a case).
 
-If you find this site helpful, please consider sharing it with a friend!  
-The more people start using the site, the faster improvements will come along
-
-Site is under heavy development and is being improved each day in some way or another. If you see something you don't like feel free to open an issue on Github Link is in the footer. .
