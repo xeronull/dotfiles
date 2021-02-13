@@ -1,4 +1,4 @@
-" Disable arrow keys
+" disable arrow keys
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -36,3 +36,5 @@ return ""
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin() 
+
+noremap <leader>u :w<Home>silent <End> !urlview<CR>
