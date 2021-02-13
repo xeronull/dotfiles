@@ -9,7 +9,7 @@
 # Put these macros in your $HOME/.muttrc file.
 #
 # macro index \cb |urlview\n
-# macro pager \cb |urlview\n	
+# macro pager \cb |urlview\n    
 #
 # You can call 'urlview' while in 'tin' by pressing | then a for article,
 # put urlview as the pipe command.
@@ -26,4 +26,5 @@ REGEXP (((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>
 #COMMAND lynx %s
 #COMMAND netscape -remote 'openURL(%s)'
 #COMMAND url_handler.sh
-COMMAND firefox
+COMMAND icecat
+
