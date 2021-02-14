@@ -1,0 +1,2 @@
+#put them all in a text file and pass it to Youtube-dl as an argument like below.
+youtube-dl -a url.txt
