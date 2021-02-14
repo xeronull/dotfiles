@@ -1,2 +1,14 @@
-#put them all in a text file and pass it to Youtube-dl as an argument like below.
-youtube-dl -a url.txt
+# Download youtube to mp3
+youtube-dl -f bestaudio -x --audio-format mp3 -o '%(playlist)s/%(playlist_index)s – %(title)s.%(ext)s' playlist url
+
+# Download playlist
+youtube-dl -o '%(playlist)s/%(playlist_index)s – %(title)s.%(ext)s' playlist url
+
+# Cut videos
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+
+# Download from ustream to mp4 so even partially downloaded data can be used
+youtube-dl --hls-use-mpegts -v http://www.ustream.tv/recorded/114791411
+
+# Convert part to mp4
+ffmpeg --hls-use-mpegts --prefer-ffmpeg -i a.mp4.part -c copy o.mp4
