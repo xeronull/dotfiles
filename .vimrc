@@ -5,6 +5,9 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap <Backspace> <Nop>
 
+" " Scroll with mouse
+set mouse=a
+
 " Turn on syntax highlighting
 syntax enable 
 
