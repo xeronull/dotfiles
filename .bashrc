@@ -261,8 +261,7 @@ fzf --ansi --multi | sed 's#.*\(https*://\)#\1#'
 yt() { youtube-dl -q -f bestaudio --max-downloads 1 --no-playlist --default-search ${2:-ytsearch} "$1" -o - | mpv -vo null /dev/fd/3 3<&0 </dev/tty; }
 
 bind 'set completion-ignore-case on'
- bind 'set show-all-if-ambiguous on'
+bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
-
 
 alias searx='bash ~/searx/searx.sh'
