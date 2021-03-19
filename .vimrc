@@ -41,3 +41,13 @@ endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin() 
 
 noremap <leader>u :w<Home>silent <End> !urlview<CR>
+
+"" Vimwiki instant markdown
+  "Uncomment to override defaults:
+ let g:instant_markdown_port = 8080
+let g:instant_markdown_browser = "icecat --new-window"
+ let g:instant_markdown_autostart = 0    " disable autostart
+ map <leader>md :InstantMarkdownPreview<CR>"
+ 
+ let g:vimwiki_list = [{'path': '~/vimwiki/',
+                       \ 'syntax': 'markdown', 'ext': '.md'}]
