@@ -265,3 +265,5 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 alias searx='bash ~/searx/searx.sh'
+
+function music() { mpv-input file=/tmp/mpv-control $@ -playlist <(find "$HOME/Music/${@: -1}" -iregex ".*\.\(m4a\|mp3\)" -type f | sort); }
