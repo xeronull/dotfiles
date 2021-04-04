@@ -1,5 +1,5 @@
 # Homepage that vimb opens if started without a URI.
-set home-page=https://startpage.com
+set home-page=https://github.com
 
 # Path to the default download directory. If no download directory is set,
 # download will be written into current directory. The following pattern will
@@ -25,7 +25,7 @@ set spell-checking=true
 set spell-checking-languages=en
 
 # Enable or disable support for WebGL on pages.
-set webgl=true
+set webgl=false
 
 # While typing a search command, show where the pattern typed so far matches.
 set incsearch=true
@@ -58,7 +58,7 @@ shortcut-add ddg=https://duckduckgo.com/?q=$0
 shortcut-add cm=https://www.codemadness.org/idiotbox/?m=light&q=$0
 shortcut-add sp=https://www.startpage.com/do/search?q=$0
 shortcut-add pvh=https://www.pornovideoshub.com/?s=$0
-shortcut-add r=https://redditsearch.io/?term=$0&dataviz=false&aggs=false&subreddits=&searchtype=posts&search=true&start=1559621517&end=1559707917&size=100 
+shortcut-add r=https://redditsearch.io/?term=$0&dataviz=false&aggs=false&subreddits=&searchtype=posts&search=true&start=1559621517&end=1559707917&size=100
 
 
 
@@ -81,4 +81,3 @@ set input-css=color:#d3d0c8;background-color:#393939;font:12pt Hack;
 set input-error-css=color:#f2777a;background-color:#393939;font:12pt Hack;
 set status-css=color:#ffcc66;background-color:#393939;font:12pt Hack;
 set status-ssl-css=color:#99cc99;background-color:#393939;font:12pt Hack;
-
