@@ -27,6 +27,31 @@ fi
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
+# find largest packages
+alias ducks='du -cks * | sort -rn | head -11'
+
+alias torstatus='systemctl status tor'
+
+alias torrestart='sudo systemctl restart tor'
+
+alias c='clear'
+
+alias bm='v .config/bookmenu/bookmarks'
+
+alias news='newsboat'
+
+alias invidious='invidious-viewer'
+
+alias v='vim'
+
+alias streamlink='streamlink --player=mpv'
+
+alias wgetsite='wget -np -r -k'
+
+alias w3mcm='w3m codemadness.org/idiotbox'
+
+alias al='alchestbreach'
+
 #list
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -105,9 +130,6 @@ alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
 #switch between bash and zsh
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-
-alias v='sudo vim'
 
 #quickly kill conkies
 alias kc='killall conky'
@@ -224,12 +246,12 @@ ex ()
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 
-
 export PS1="\w> \[$(tput sgr0)\]"
-
+export EDITOR='vim'
 export BROWSER='/usr/bin/icecat'
+#export BROWSER='/usr/bin/vimb'
 export PATH="$PATH:$HOME/scripts"
-
+export PATH=$PATH:$HOME/.local/bin
 
 xmodmap ~/.Xmodmap
 
@@ -265,3 +287,5 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 alias searx='bash ~/searx/searx.sh'
+
+export PYTHONPATH="/usr/lib/python3.9/site-packages:$PYTHONPATH"
