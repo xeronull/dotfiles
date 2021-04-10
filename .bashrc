@@ -28,6 +28,13 @@ fi
 bind "set completion-ignore-case on"
 
 # find largest packages
+
+alias checktor='curl --socks5 localhost:9050 \
+     --socks5-hostname localhost:9050 \
+     -s https://check.torproject.org/ \
+     | cat | grep -m 1 Congratulations | xargs'
+
+
 alias ducks='du -cks * | sort -rn | head -11'
 
 alias torstatus='systemctl status tor'
