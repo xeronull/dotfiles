@@ -1,11 +1,11 @@
 # make sure you have readability-cli installed yay -S readability-cli --noconfirm
 
 
-# Credits to https://github.com/gotbletu/shownotes/blob/master/w3m_extern_link.md
 keymap  L       NEXT
 keymap  H       PREV
 keymap  \\\r    COMMAND "SHELL 'readable $W3M_URL -p html-title,html-content > /tmp/readable.html' ; LOAD /tmp/readable.html"
 
+# Credits to https://github.com/gotbletu/shownotes/blob/master/w3m_extern_link.md
 # External Commands {{{
     # EXTERN_LINK = under cursor
     # EXTERN      = current page
