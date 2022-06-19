@@ -1,5 +1,44 @@
 # make sure you have readability-cli installed yay -S readability-cli --noconfirm
 
+
+# Credits to https://github.com/gotbletu/shownotes/blob/master/w3m_extern_link.md
 keymap  L       NEXT
 keymap  H       PREV
 keymap  \\\r    COMMAND "SHELL 'readable $W3M_URL -p html-title,html-content > /tmp/readable.html' ; LOAD /tmp/readable.html"
+
+# External Commands {{{
+    # EXTERN_LINK = under cursor
+    # EXTERN      = current page
+    
+    # yank url to multiple clipboard
+    keymap  yy      EXTERN_LINK "url=%s ; printf "%b" "$url" > /tmp/clipbrd.txt ; printf "%b" "$url" | xsel -b ; printf "%b" "$url" | tmux load-buffer -"
+    keymap  YY      EXTERN      "url=%s ; printf "%b" "$url" > /tmp/clipbrd.txt ; printf "%b" "$url" | xsel -b ; printf "%b" "$url" | tmux load-buffer -"
+    
+    # open gui browser
+    keymap  xw      EXTERN_LINK   '$BROWSER'
+    keymap  XW      EXTERN        '$BROWSER'
+    keymap  xn      EXTERN_LINK   '$BROWSER_PRIVATE'
+    keymap  XN      EXTERN        '$BROWSER_PRIVATE'
+    
+    # queue download file (task-spooler)
+    keymap  xd      EXTERN_LINK   'TS_SOCKET=/tmp/w3m tsp aria2c -j 1 -x 2 -c -d ~/Downloads'
+    keymap  xD      EXTERN_LINK   'TS_SOCKET=/tmp/w3m tsp wget -c -P ~/Downloads'
+    
+    # queue external media player (task-spooler) e.g youtube, video links
+    keymap  xm      EXTERN_LINK   'tsp mpv --ontop --no-border --force-window --autofit=500x280 --geometry=-15-53'
+    keymap  XM      EXTERN        'tsp mpv --ontop --no-border --force-window --autofit=500x280 --geometry=-15-53'
+    
+    # open external image viewer
+    keymap  xi      EXTERN_LINK   'w3m -o display_image=1 -o imgdisplay=w3mimgdisplay'
+    keymap  xI      EXTERN_LINK   'feh -. -x -B black -g 900x600-15+60 %s &'
+    keymap  xg      EXTERN_LINK   'mpv --loop --quiet --ontop --no-border --force-window --autofit=900x600 --geometry=-15+60'
+    
+    # add torrent or magnetlinks
+    keymap  xt      EXTERN_LINK   'transmission-remote --add'
+    
+    # basic task-spooler view, cat, clear
+    keymap  xs      SHELL         'watch TS_SOCKET=/tmp/w3m tsp'
+    keymap  XS      SHELL         'clear && TS_SOCKET=/tmp/w3m tsp -c'
+    keymap  xc      SHELL         'clear && TS_SOCKET=/tmp/w3m tsp -C'
+    
+    # }}}
