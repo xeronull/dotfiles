@@ -1,0 +1,21 @@
+winetricks dxvk
+Install xact via Winetricks
+WINEARCH=win64 WINEPREFIX='/home/$USER/.steam/steam/steamapps/compatdata/377160/pfx' winetricks xact
+Install faudio 
+https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
+-Extract dlls to steamapps/common/Fallout 4/prefix/drive_c/windows/system32/
+-Change Audio Libraries - Override xaudio2_7 and set to native
+WINEARCH=win64 WINEPREFIX='/home/$USER/.steam/steam/steamapps/compatdata/377160/pfx' winecfg
+Fallout 4 Launcher Options
+Set God Rays off
+Modify Fallout4.ini
+[Controls]
+bBackgroundMouse=1
+[Display]
+bComputeShaderDeferredTiledLighting=0
+bBorderless=1
+bFull Screen=1
+iSize H=1080
+iSize W=2560
+Launch Options
+PROTON_NO_ESYNC=1 DXVK_HUD=fps %command%
