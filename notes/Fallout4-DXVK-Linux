@@ -1,4 +1,4 @@
-#this is my working solution for playing fallout 4 on arch linux with dxvk and minimal sound problems
+#this is my working solution for playing vanilla fallout 4 on arch linux with dxvk and minimal sound problems
 #working as of july 7 2022
 
 installing GPU Driver with DXVK support
@@ -23,15 +23,5 @@ Install faudio
 https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
 Extract all dlls to ~/.wine/drive_c/windows/system32/
 
-Fallout 4 Launcher Options
-Set God Rays off
-Modify Fallout4.ini
-[Controls]
-bBackgroundMouse=1
-[Display]
-bComputeShaderDeferredTiledLighting=0
-bBorderless=1
-bFull Screen=1
-iSize H=1080
-iSize W=1920
+
 
