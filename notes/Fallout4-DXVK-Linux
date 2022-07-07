@@ -3,24 +3,25 @@ nstalling GPU Driver with DXVK support
 nVidia GPU 
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
 
-AMD GPU
-sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader
-
-Intel GPU
-sudo pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
-
 Installing Wine
 sudo pacman -Syu &&
 sudo pacman -S winetricks wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal v4l-utils lib32-v4l-utils libpulse lib32-libpulse libgpg-error lib32-libgpg-error alsa-plugins lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo lib32-libjpeg-turbo sqlite lib32-sqlite libxcomposite lib32-libxcomposite libxinerama lib32-libgcrypt libgcrypt lib32-libxinerama ncurses lib32-ncurses opencl-icd-loader lib32-opencl-icd-loader libxslt lib32-libxslt libva lib32-libva gtk3 lib32-gtk3 gst-plugins-base-libs lib32-gst-plugins-base-libs vulkan-icd-loader lib32-vulkan-icd-loader
 
-winetricks dxvk
+Install DXVK
+https://github.com/doitsujin/dxvk/releases/tag/v1.10.1
+cd Downloads/dvxk/
+export WINEPREFIX=~/.wine
+./setup_dxvk.sh install
+
+Install xact
 winetricks xact
-WINEARCH=win64 WINEPREFIX='/home/$USER/.steam/steam/steamapps/compatdata/377160/pfx' winetricks xact
+winecfg
+Override xaudio2_7 and set to native (this fixes the sound crash to desktop bug)
+
 Install faudio 
 https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
--Extract dlls to steamapps/common/Fallout 4/prefix/drive_c/windows/system32/
--Change Audio Libraries - Override xaudio2_7 and set to native
-WINEARCH=win64 WINEPREFIX='/home/$USER/.steam/steam/steamapps/compatdata/377160/pfx' winecfg
+Extract dlls to ~/.wine/drive_c/windows/system32/
+
 Fallout 4 Launcher Options
 Set God Rays off
 Modify Fallout4.ini
@@ -31,6 +32,5 @@ bComputeShaderDeferredTiledLighting=0
 bBorderless=1
 bFull Screen=1
 iSize H=1080
-iSize W=2560
-Launch Options
-PROTON_NO_ESYNC=1 DXVK_HUD=fps %command%
+iSize W=1920
+
