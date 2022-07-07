@@ -1,4 +1,7 @@
-nstalling GPU Driver with DXVK support
+#this is my working solution for playing fallout 4 on arch linux with dxvk and minimal sound problems
+#working as of july 7 2022
+
+installing GPU Driver with DXVK support
 
 nVidia GPU 
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings vulkan-icd-loader lib32-vulkan-icd-loader
@@ -15,12 +18,10 @@ export WINEPREFIX=~/.wine
 
 Install xact
 winetricks xact
-winecfg
-Override xaudio2_7 and set to native (this fixes the sound crash to desktop bug)
 
 Install faudio 
 https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
-Extract dlls to ~/.wine/drive_c/windows/system32/
+Extract all dlls to ~/.wine/drive_c/windows/system32/
 
 Fallout 4 Launcher Options
 Set God Rays off
