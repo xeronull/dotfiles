@@ -1,4 +1,4 @@
-#this is my working solution for playing vanilla fallout 4 on arch linux with dxvk and minimal sound problems
+#this is my working solution for playing fallout 4 on arch linux with dxvk, enb and minimal sound problems
 #working as of july 9 2022
 
 installing GPU Driver with DXVK support
