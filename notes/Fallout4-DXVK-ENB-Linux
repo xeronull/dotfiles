@@ -1,5 +1,5 @@
 #this is my working solution for playing vanilla fallout 4 on arch linux with dxvk and minimal sound problems
-#working as of july 7 2022
+#working as of july 9 2022
 
 installing GPU Driver with DXVK support
 
@@ -22,6 +22,12 @@ winetricks xact
 Install faudio 
 https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
 Extract all dlls to ~/.wine/drive_c/windows/system32/
+
+Install EnbSeries dlls
+http://enbdev.com/download_mod_fallout4.htm
+d3d11.dll d3dcompiler_46e.dll
+
+winetricks d3dx11_43 d3dcompiler_43 d3dcompiler_47
 
 
 
