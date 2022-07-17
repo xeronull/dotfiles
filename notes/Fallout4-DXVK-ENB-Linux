@@ -24,9 +24,7 @@ Install faudio
 https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
 Extract all dlls to ~/.wine/drive_c/windows/system32/
 
-Fallout 4 has garbled sound (crackling / popping noises) - when using stock Pulseaudio settings under Linux. This is still the case, even after the xact.dll override is in place.
-To workaround this add the following env variable:
-export PULSE_LATENCY_MSEC=60
+https://web.archive.org/web/20191126145156/https://ludwig.im/en/projects/steam-pulseaudio-sound-latency-lagging-problem-noise
 
 Install EnbSeries dlls
 http://enbdev.com/download_mod_fallout4.htm
