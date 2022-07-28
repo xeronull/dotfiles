@@ -37,6 +37,7 @@ Install EnbSeries dlls
 http://enbdev.com/download_mod_fallout4.htm
 Put these into your game folde for the exe is located --> d3d11.dll d3dcompiler_46e.dll
 
+Get ENB working
 winetricks d3dx11_43 d3dcompiler_43 d3dcompiler_47
 
 
