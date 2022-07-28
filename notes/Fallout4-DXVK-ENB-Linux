@@ -1,7 +1,7 @@
 #because i have a terrible memomry
 #this is my working solution for playing Fallout 4 on arch linux with dxvk, enb and minimal sound problems
 #for nvidia users
-#working as of july 9 2022
+#working as of july 28 2022
 
 Uinstall Wine
 rm -rf ~/.Wine
