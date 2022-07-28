@@ -21,21 +21,21 @@ sudo pacman -S winetricks wine-staging giflib lib32-giflib libpng lib32-libpng l
 Install DXVK
 https://github.com/doitsujin/dxvk/releases/tag/v1.10.2
 cd Downloads/dvxk/
-export WINEPREFIX=~/.wine
+export WINEPREFIX=~/.wine/
 ./setup_dxvk.sh install
 
 Install xact
 winetricks xact
 
 Install faudio 
-https://github.com/Kron4ek/FAudio-Builds/releases/download/19.01/faudio-19.01.tar.xz
+https://github.com/Kron4ek/FAudio-Builds/releases
 Extract all dlls to ~/.wine/drive_c/windows/system32/
 
 https://web.archive.org/web/20191126145156/https://ludwig.im/en/projects/steam-pulseaudio-sound-latency-lagging-problem-noise
 
 Install EnbSeries dlls
 http://enbdev.com/download_mod_fallout4.htm
-d3d11.dll d3dcompiler_46e.dll
+Put these into your game folde for the exe is located --> d3d11.dll d3dcompiler_46e.dll
 
 winetricks d3dx11_43 d3dcompiler_43 d3dcompiler_47
 
